@@ -1,0 +1,186 @@
+.aboutme__title {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: 1px solid black;
+  padding-bottom: 23px;
+}
+
+.aboutme {
+  padding: 120px 70px 0px 70px;
+}
+
+.aboutme__info {
+  background: url("../Icons/pic__COLOR_pic.png") no-repeat;
+  background-position: right top;
+  background-size: 270px 324px;
+}
+
+.aboutme__container {
+  margin-top: 66px;
+  width: clamp(22.75rem, 12.214rem + 28.095vw, 37.5rem);
+}
+
+.aboutme__container-info {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 111.111% */
+  margin: 0px;
+  margin-top: 20px;
+}
+
+.aboutme__container-paragraph {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  margin: 0px;
+  margin-top: 22px;
+}
+
+.aboutme__container-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px; /* 116% */
+  letter-spacing: -2px;
+  margin: 0px;
+}
+
+.aboutme__container-link {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  margin: 0px;
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 324px) and (max-width: 768px) {
+  .aboutme__container-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: -1.6px;
+  }
+
+  .aboutme {
+    padding: 86px 50px 0px 50px;
+  }
+
+  .aboutme__container-info {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    margin-top: 18px;
+  }
+
+  .aboutme__container-paragraph {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    max-width: 364px;
+  }
+
+  .aboutme__info {
+    background: url("../Icons/pic__COLOR_pic.png") no-repeat;
+    background-position: right top;
+    background-size: 255px 307px;
+  }
+
+  .aboutme__container-link {
+    margin-top: 85px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .aboutme__title {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    padding-bottom: 30px;
+  }
+  .aboutme {
+    padding: 130px 15px 0px 15px;
+  }
+
+  .aboutme__info {
+    background-position: top center;
+    background-size: 292px 352px;
+  }
+
+  .aboutme__container {
+    padding: 0px;
+    padding-top: 390px;
+    margin-top: 60px;
+    width: clamp(18.25rem, 17.893rem + 0.952vw, 18.75rem);
+  }
+
+  .aboutme__container-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+
+  .aboutme__container-paragraph {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+  }
+
+  .aboutme__container-info {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 145.455% */
+  }
+  .aboutme__container-link {
+    margin: 0px;
+    margin-top: 40px;
+  }
+}

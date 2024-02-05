@@ -1,0 +1,160 @@
+.userForm {
+}
+
+.userForm__title {
+  margin: 0px;
+  margin-top: 40px;
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.userForm__form {
+  display: flex;
+  flex-direction: column;
+  min-width: 396px;
+  margin-top: 40px;
+}
+
+.userForm__input {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: start;
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.userForm__label {
+  color: #a0a0a0;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 2px;
+  margin-bottom: 4px;
+}
+
+.userForm__input:focus {
+  outline: none;
+  border-bottom: 1px solid #3456f3;
+  box-shadow: none;
+  background: none;
+}
+
+.userForm__submit {
+  width: 396px;
+  height: 45px;
+  padding: 0;
+  margin-top: 125px;
+  border: 0;
+  border-radius: 2px;
+  background: #3456f3;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: opacity 0.5s linear;
+}
+
+.userForm__submit:hover {
+  border-radius: 2px;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.userForm__isLogged {
+  color: #a0a0a0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.userForm__link {
+  text-decoration: none;
+  color: #3456f3;
+  transition: opacity 0.5s linear;
+}
+
+.userForm__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.userForm__text {
+  margin: 0px;
+}
+
+.userForm__link {
+  margin: 0px;
+}
+
+.userForm__input_type_password {
+  margin-bottom: 95px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .userForm__form {
+    max-width: 260px;
+    min-width: 259px;
+    margin-top: 85px;
+  }
+
+  .userForm__title {
+    text-align: center;
+  }
+
+  .userForm__submit {
+    width: 260px;
+    margin-top: 215px;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .userForm__link {
+    color: #3456f3;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .userForm__text {
+    color: #a0a0a0;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

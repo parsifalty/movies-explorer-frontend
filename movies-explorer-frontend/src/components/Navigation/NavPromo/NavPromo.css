@@ -1,0 +1,37 @@
+.navpromo {
+  margin-left: auto;
+}
+
+.navpromo__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.navpromo__links {
+  color: #fff;
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+}
+
+.navpromo__link_type_login {
+  cursor: pointer;
+  color: #000;
+  border-radius: 3px;
+  background: #2be080;
+  padding: 8px 20px;
+  color: black;
+}
+
+.navpromo__link_type_register {
+  cursor: pointer;
+  color: #fff;
+}

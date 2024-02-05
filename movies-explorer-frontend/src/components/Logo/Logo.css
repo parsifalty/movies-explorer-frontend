@@ -1,0 +1,10 @@
+.logo__img {
+  background: url(../Icons/logo.svg) no-repeat;
+  width: 39.5px;
+  height: 39px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
