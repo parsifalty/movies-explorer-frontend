@@ -11,6 +11,7 @@ export default function BurgerMenu(props) {
         <button
           className="burgerMenu__box-button"
           onClick={props.handleClose}
+          type="button"
         ></button>
         <NavMenu isDesktop={props.isDesktop} />
       </div>

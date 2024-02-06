@@ -5,7 +5,7 @@
   margin: 0px;
   margin-top: 40px;
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -26,7 +26,7 @@
   padding-bottom: 9px;
   border-bottom: 1px solid #e8e8e8;
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -38,7 +38,7 @@
 
 .userForm__label {
   color: #a0a0a0;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -64,7 +64,7 @@
   background: #3456f3;
   color: #fff;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -81,7 +81,7 @@
 .userForm__isLogged {
   color: #a0a0a0;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -112,26 +112,27 @@
 }
 
 .userForm__input_type_password {
-  margin-bottom: 95px;
+  margin-bottom: 90px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .userForm__form {
     max-width: 260px;
     min-width: 259px;
-    margin-top: 85px;
+    margin-top: 80px;
   }
 
   .userForm__title {
     text-align: center;
+    margin-top: 49px;
   }
 
   .userForm__submit {
     width: 260px;
-    margin-top: 215px;
+    margin-top: 212px;
     color: #fff;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -141,7 +142,7 @@
   .userForm__link {
     color: #3456f3;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -151,7 +152,7 @@
   .userForm__text {
     color: #a0a0a0;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

@@ -14,11 +14,18 @@ import Error from "../Error/Error";
 
 function App() {
   const location = useLocation();
-  const pathname = location.pathname !== "/profile";
-  const [isLogged, setIsLogged] = React.useState(false);
+  const pathnameFooter =
+    location.pathname !== "/profile" &&
+    location.pathname !== "/signin" &&
+    location.pathname !== "/signup";
+  const pathnameHeader =
+    location.pathname !== "*" &&
+    location.pathname !== "/signin" &&
+    location.pathname !== "/signup";
+  const [isLogged, setIsLogged] = React.useState(true);
   return (
     <div className="App">
-      <Header isLogged={isLogged} />
+      {pathnameHeader ? <Header isLogged={isLogged} /> : ""}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/movies" element={<Movies />} />
@@ -26,9 +33,9 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="signin" element={<Login />} />
         <Route path="signup" element={<Register />} />
-        <Route path="404" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-      {pathname && isLogged ? <Footer /> : ""}
+      {pathnameFooter && isLogged ? <Footer /> : ""}
     </div>
   );
 }

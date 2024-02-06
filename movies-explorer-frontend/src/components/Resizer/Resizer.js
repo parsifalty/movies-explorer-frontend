@@ -11,7 +11,7 @@ const useDeviceType = () => {
       const { innerWidth } = window;
       setIsMobile(innerWidth <= 768);
       setIsTablet(innerWidth > 768 && innerWidth <= 1279);
-      setIsDesktop(innerWidth > 1280);
+      setIsDesktop(innerWidth > 1279);
     };
 
     handleResize();

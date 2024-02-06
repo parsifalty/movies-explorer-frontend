@@ -5,19 +5,19 @@ export default function NavPromo() {
   return (
     <nav className="navpromo">
       <ul className="navpromo__list">
-        <li className="navpromo__link ">
+        <li className="navpromo__list-item">
           <Link
             to="/signup"
-            className="navpromo__links navpromo__link_type_register"
+            className="navpromo__link navpromo__link_type_register"
           >
             Регистрация
           </Link>
         </li>
-        <li className="navpromo__link">
+        <li className="navpromo__list-item">
           {" "}
           <Link
             to="/signin"
-            className="navpromo__links  navpromo__link_type_login"
+            className="navpromo__link navpromo__link_type_login"
           >
             Войти
           </Link>

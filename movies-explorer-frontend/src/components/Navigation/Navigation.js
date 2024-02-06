@@ -26,6 +26,7 @@ export default function Navigation(props) {
               props.location ? `navigation__button-black` : `navigation__button`
             }
             onClick={handleOpen}
+            type="button"
           ></button>
           <BurgerMenu
             isDesktop={props.isDesktop}

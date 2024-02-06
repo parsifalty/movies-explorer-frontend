@@ -13,7 +13,9 @@ export default function Header(props) {
 
   return (
     <header className={pathname ? `header-white` : `header`}>
-      <div className="header__container">
+      <div
+        className={pathname ? `header-white__container` : `header__container`}
+      >
         <Logo />
         {props.isLogged ? (
           <Navigation isDesktop={isDesktop} location={pathname} />

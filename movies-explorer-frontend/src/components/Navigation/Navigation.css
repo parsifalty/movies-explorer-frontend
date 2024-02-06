@@ -1,8 +1,8 @@
 .navigation__button {
   background: none;
   background-image: url("../Icons/icon__COLOR_icon-main\ \(4\).svg");
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border: 0;
   box-shadow: none;
   cursor: pointer;
@@ -11,9 +11,31 @@
 .navigation__button-black {
   background: none;
   background-image: url("../Icons/icon__COLOR_icon-main\ \(5\).svg");
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border: 0;
   box-shadow: none;
   cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navigation__button {
+    background: none;
+    background-image: url("../Icons/icon__COLOR_icon-main\ \(4\).svg");
+    width: 43px;
+    height: 43px;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .navigation__button-black {
+    background: none;
+    background-image: url("../Icons/icon__COLOR_icon-main\ \(5\).svg");
+    width: 43px;
+    height: 43px;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+  }
 }

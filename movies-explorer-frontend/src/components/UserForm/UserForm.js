@@ -1,18 +1,24 @@
 import React from "react";
 import "./UserForm.css";
+import { Link } from "react-router-dom";
 
 export default function UserForm(props) {
   return (
     <section className="userForm">
-      <h2 className="userForm__title">{props.title}</h2>
+      <h1 className="userForm__title">{props.title}</h1>
       <form className="userForm__form" onSubmit={props.onSubmit}>
         {props.children}
-        <button className="userForm__submit">{props.button}</button>
+        <button className="userForm__submit" type="submit">
+          {props.button}
+        </button>
       </form>
       {props.register && (
         <div className="userForm__isLogged">
           <p className="userForm__text">
-            Уже зарегестрированы? <span className="userForm__link"> Войти</span>
+            Уже зарегестрированы?{" "}
+            <Link className="userForm__link" to="/signin">
+              Войти
+            </Link>
           </p>
         </div>
       )}
@@ -20,7 +26,9 @@ export default function UserForm(props) {
         <div className="userForm__isLogged">
           <p className="userForm__text">
             Ещё не зарегестрированы?{" "}
-            <span className="userForm__link">Регистрация</span>
+            <Link className="userForm__link" to="/signup">
+              Регистрация
+            </Link>
           </p>
         </div>
       )}

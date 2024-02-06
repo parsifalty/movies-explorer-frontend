@@ -19,10 +19,14 @@ export default function AboutMe() {
             Контур». После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
-          <p className="aboutme__container-link" to="/">
-            <Link className="aboutme__container-link" to="/">
+          <p className="aboutme__container-link">
+            <a
+              className="aboutme__link"
+              href="https://www.w3schools.com"
+              target="_blank"
+            >
               Github
-            </Link>
+            </a>
           </p>
         </div>
       </div>

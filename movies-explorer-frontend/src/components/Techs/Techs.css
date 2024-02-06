@@ -3,7 +3,7 @@
   margin: 0px;
   padding: 0px;
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -20,13 +20,13 @@
 }
 
 .techs__container {
-  padding: 98px 70px 90px 70px;
+  padding: 100px 70px 90px 70px;
 }
 
 .techs__title {
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
@@ -40,7 +40,7 @@
 .techs__paragraph {
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -67,15 +67,17 @@
   margin-top: 99px;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
+  padding: 0px;
 }
 
-.techs__box__item {
+.techs__box-item {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -89,13 +91,13 @@
   height: 60px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .techs__container {
     padding: 70px 50px;
   }
 
   .techs__maintitle {
-    padding-bottom: 20px;
+    padding-bottom: 23px;
   }
   .techs__about {
     margin: 80px;
@@ -105,7 +107,7 @@
     max-width: 460px;
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -113,29 +115,41 @@
     letter-spacing: -0.48px;
   }
 
+  .techs__about {
+    gap: 23px;
+  }
+
   .techs__box {
     margin: 0px;
     margin-bottom: 20px;
+  }
+
+  .techs__box-item {
+    width: 84px;
+    height: 58px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .techs {
     background: #fff;
+    max-width: 284px;
+    margin: auto;
   }
   .techs__maintitle {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
+    padding-bottom: 27px;
   }
   .techs__container {
     margin: 0px;
     padding: 0px;
-    padding: 105px 18px;
+    padding: 102.3px 18px;
   }
 
   .techs__title {
@@ -143,7 +157,7 @@
     padding: 0px;
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -152,14 +166,15 @@
   }
   .techs__about {
     margin: 0px;
-    margin-top: 68px;
+    margin-top: 61px;
     padding: 0px;
+    gap: 23px;
   }
 
   .techs__paragraph {
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -171,15 +186,23 @@
     display: grid;
     grid-template-columns: repeat(2, 90px);
     justify-content: center;
+    align-items: end;
     gap: 0px;
     row-gap: 10px;
     column-gap: 10px;
-
-    margin-top: 45px;
+    margin-top: 50px;
   }
 
-  .techs__box__item {
-    width: 85px;
-    height: 60px;
+  .techs__box-item {
+    width: 84px;
+    height: 57px;
+  }
+
+  .techs__box-item:nth-child(even) {
+    justify-self: start;
+  }
+
+  .techs__box-item:nth-child(odd) {
+    justify-self: end;
   }
 }

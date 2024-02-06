@@ -5,7 +5,7 @@
 }
 
 .aboutproject__container {
-  padding-top: 110px;
+  padding-top: 108px;
   margin: 0px 70px 0px 70px;
   width: 100%;
 }
@@ -15,7 +15,7 @@
   margin: 0px;
   padding: 0px;
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -37,7 +37,7 @@
 
 .aboutproject__grid-title {
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -49,7 +49,7 @@
 
 .aboutproject__grid-paragraph {
   color: #000;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -74,7 +74,7 @@
   height: 36px;
   color: #000;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -96,7 +96,7 @@
   height: 17px;
   color: #a0a0a0;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -107,7 +107,7 @@
   width: 80%;
   color: #a0a0a0;
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -115,17 +115,16 @@
   height: 17px;
 }
 
-@media screen and (min-width: 328px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .aboutproject__container {
     margin: 0px 50px;
-    padding-top: 89px;
+    padding-top: 87px;
   }
 
   .aboutproject__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 24px 40px;
-    row-gap: 44px;
     column-gap: 30px;
     margin-top: 70px;
     margin-bottom: 110px;
@@ -133,34 +132,68 @@
 
   .aboutproject__grid-paragraph {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
+    padding-top: 20px;
     line-height: 18px; /* 150% */
+  }
+
+  .aboutproject__flex {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    row-gap: 14px;
+    margin-bottom: 110px;
+  }
+
+  .aboutproject__flex-text-one {
+    width: 21%;
+    background: #2be080;
+  }
+
+  .aboutproject__flex-text-two {
+    width: 79%;
+    background: #f2f2f2;
+  }
+
+  .aboutproject__flex-text-three {
+    width: 21%;
+  }
+
+  .aboutproject__flex-text-four {
+    width: 79%;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .aboutproject {
+    max-width: 284px;
+    margin: auto;
+  }
   .aboutproject__container {
     margin: 0px;
-    margin-top: 75px;
+    margin-top: 70px;
     padding: 0px 18px;
   }
 
   .aboutproject__title {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
+    padding-bottom: 27px;
   }
 
   .aboutproject__grid-title {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -170,7 +203,7 @@
 
   .aboutproject__grid-paragraph {
     color: #000;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -182,8 +215,12 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
     margin-top: 60px;
-    row-gap: 60px;
-    margin-bottom: 55px;
+    row-gap: 55px;
+    margin-bottom: 59px;
+  }
+
+  .aboutproject__flex {
+    row-gap: 7px;
   }
 
   .aboutproject__flex-text-one {
@@ -196,7 +233,7 @@
   .aboutproject__flex-text {
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -206,7 +243,7 @@
     width: 35%;
     color: #a0a0a0;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -216,7 +253,7 @@
     width: 65%;
     color: #a0a0a0;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;

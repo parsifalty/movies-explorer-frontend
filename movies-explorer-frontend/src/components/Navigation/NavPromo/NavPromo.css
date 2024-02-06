@@ -11,10 +11,10 @@
   align-items: center;
 }
 
-.navpromo__links {
+.navpromo__link {
   color: #fff;
   text-decoration: none;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -34,4 +34,23 @@
 .navpromo__link_type_register {
   cursor: pointer;
   color: #fff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navpromo__link {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 160% */
+  }
+
+  .navpromo__link_type_login {
+    padding: 5px 12.5px;
+  }
+
+  .navpromo__list {
+    gap: 12px;
+  }
 }

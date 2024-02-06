@@ -8,13 +8,13 @@ import Portfolio from "../Portfolio/Portfolio.js";
 
 export default function Main() {
   return (
-    <section className="main">
+    <main className="main">
       {" "}
       <Promo />
       <AboutProject />
       <Techs />
       <Aboutme />
       <Portfolio />
-    </section>
+    </main>
   );
 }

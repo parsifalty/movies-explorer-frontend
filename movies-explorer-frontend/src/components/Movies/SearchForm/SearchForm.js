@@ -16,9 +16,9 @@ export default function SearchForm() {
             Найти
           </button>
         </div>
-        <div className="searchForm__box">
+        <div className="searchForm__form-box">
           <input type="checkbox" id="toggle" className="searchForm__checkbox" />
-          <label for="toggle" class="searchForm__switch"></label>
+          <label for="toggle" className="searchForm__switch"></label>
           <p className="searchForm__paragraph">Короткометражки</p>
         </div>
       </form>

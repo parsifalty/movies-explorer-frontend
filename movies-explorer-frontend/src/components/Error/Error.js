@@ -4,9 +4,13 @@ import "./Error.css";
 export default function Error() {
   return (
     <section className="error">
-      <h3 className="error__title">404</h3>
+      <h1 className="error__title">404</h1>
       <p className="error__text">Страница не найдена</p>
-      <p className="error__span">Назад</p>
+      <button className="error__button" type="button">
+        <a href="javascript:history.back()" className="error__link">
+          Назад
+        </a>
+      </button>
     </section>
   );
 }

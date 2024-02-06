@@ -6,7 +6,7 @@ export default function AboutProject() {
   const isMobile = useDeviceType();
   console.log(isMobile);
   return (
-    <section className="aboutproject">
+    <section className="aboutproject" id="about">
       <div className="aboutproject__container">
         <h2 className="aboutproject__title">О проекте</h2>
         {isMobile.isMobile ? (
