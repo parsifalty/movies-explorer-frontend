@@ -19,9 +19,7 @@ function App() {
     location.pathname !== "/signin" &&
     location.pathname !== "/signup";
   const pathnameHeader =
-    location.pathname !== "*" &&
-    location.pathname !== "/signin" &&
-    location.pathname !== "/signup";
+    location.pathname !== "/signin" && location.pathname !== "/signup";
   const [isLogged, setIsLogged] = React.useState(true);
   return (
     <div className="App">
@@ -35,7 +33,7 @@ function App() {
         <Route path="signup" element={<Register />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      {pathnameFooter && isLogged ? <Footer /> : ""}
+      {pathnameFooter ? <Footer /> : ""}
     </div>
   );
 }
