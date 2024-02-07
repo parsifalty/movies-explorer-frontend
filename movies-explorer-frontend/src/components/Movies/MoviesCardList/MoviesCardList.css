@@ -22,6 +22,12 @@
   min-height: 36px;
   margin-top: 46px;
   margin-bottom: 0px;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
+.moviesCardList__button:hover {
+  opacity: 0.6;
 }
 
 .moviesCardList__list {

@@ -13,7 +13,6 @@ export default function Profile(props) {
           <form className="profile__box profile__box-username" noValidate>
             <input
               className="profile__box-input"
-              disabled
               id="userEmail"
               name="userEmail"
               type="email"
@@ -26,7 +25,6 @@ export default function Profile(props) {
             <input
               placeholder="E-mail"
               className="profile__box-input"
-              disabled
               id="userName"
               name="userName"
               type="text"
