@@ -48,8 +48,7 @@
 }
 
 .userForm__input:focus {
-  outline: none;
-  border-bottom: 1px solid #3456f3;
+  outline: 1px solid #3456f3;
   box-shadow: none;
   background: none;
 }
