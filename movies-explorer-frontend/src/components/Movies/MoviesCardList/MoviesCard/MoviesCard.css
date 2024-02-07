@@ -19,6 +19,11 @@
   box-shadow: none;
   border-radius: 50%;
   background-position: right top;
+  transition: opacity 0.5s linear;
+}
+
+.moviesCard__like:hover {
+  opacity: 0.6;
 }
 
 .moviesCard__like-deleteButton {
@@ -31,10 +36,12 @@
   box-shadow: none;
   border-radius: 50%;
   background-position: right top;
+  transition: opacity 0.5s linear;
 }
 
 .moviesCard__like-deleteButton:hover {
   cursor: pointer;
+  opacity: 0.6;
   background: url(../../../Icons/d1.svg) no-repeat center;
 }
 
@@ -65,8 +72,20 @@
   }
 }
 
+@media screen and (min-width: 1050px) and (max-width: 1150px) {
+  .moviesCard__image {
+    width: 300px;
+  }
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .moviesCard__image {
     width: 300px;
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 680px) {
+  .moviesCard__image {
+    width: 280px;
   }
 }

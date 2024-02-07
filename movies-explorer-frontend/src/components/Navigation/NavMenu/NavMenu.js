@@ -9,7 +9,7 @@ export default function NavMenu(props) {
   return (
     <nav className="navlinks">
       <ul className="navlinks__list">
-        {!props.isDesktop.isDesktop && (
+        {!props.isDesktop.isDesktop && !props.isDesktop.isTablet && (
           <li className="navlinks__list-item">
             <Link to="/" className="navlinks__link navlinks__link_type-profile">
               Главная
@@ -18,9 +18,9 @@ export default function NavMenu(props) {
         )}
         <li className="navlinks__list-item">
           <Link
-            to="movies"
+            to="/movies"
             className={
-              pathname && props.isDesktop.isDesktop
+              pathname && !props.isDesktop.isMobile
                 ? `navlinks__link`
                 : "navlinks__link-white"
             }
@@ -32,7 +32,7 @@ export default function NavMenu(props) {
           <Link
             to="/saved-movies"
             className={
-              pathname && props.isDesktop.isDesktop
+              pathname && !props.isDesktop.isMobile
                 ? `navlinks__link`
                 : "navlinks__link-white"
             }

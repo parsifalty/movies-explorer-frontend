@@ -2,12 +2,18 @@ import React from "react";
 import "./SavedMovies.css";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
-export default function SavedMovies() {
+export default function SavedMovies(props) {
   return (
-    <section className="savedMovies">
-      <SearchForm />
-      <MoviesCardList />
-    </section>
+    <>
+      <Header isLogged={props.isLogged} />
+      <main className="savedMovies">
+        <SearchForm />
+        <MoviesCardList />
+      </main>
+      <Footer />
+    </>
   );
 }

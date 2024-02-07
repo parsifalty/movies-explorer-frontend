@@ -45,6 +45,11 @@
   font-weight: 400;
   line-height: 18px; /* 138.462% */
   cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.navlinks__link:hover {
+  opacity: 0.6;
 }
 
 .navlinks__link_type_films {
@@ -66,9 +71,15 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 138.462% */
+  cursor: pointer;
+  transition: opacity 0.5s linear;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+.navlinks__link-white:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) and (max-width: 768px) {
   .navlinks__list {
     display: flex;
     flex-direction: column;

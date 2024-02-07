@@ -5,7 +5,7 @@ import UserForm from "../UserForm/UserForm";
 
 export default function Register() {
   return (
-    <section className="register">
+    <main className="register">
       <div className="register__container">
         <Logo />
         <UserForm
@@ -27,6 +27,7 @@ export default function Register() {
             minLength="2"
             maxLength="40"
             autoComplete="off"
+            placeholder="Имя"
           />
           <label for="userEmail" className="userForm__label">
             {" "}
@@ -36,11 +37,12 @@ export default function Register() {
             className="userForm__input"
             id="userEmail"
             name="userEmail"
-            type="E-mail"
+            type="email"
             required
             minLength="2"
             maxLength="40"
             autoComplete="off"
+            placeholder="E-mail"
           />
           <label for="password" className="userForm__label">
             {" "}
@@ -55,9 +57,10 @@ export default function Register() {
             minLength="2"
             maxLength="200"
             autoComplete="off"
+            placeholder="Пароль"
           />
         </UserForm>
       </div>
-    </section>
+    </main>
   );
 }

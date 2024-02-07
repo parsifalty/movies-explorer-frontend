@@ -11,10 +11,10 @@ export default function MoviesCard(props) {
       <img
         className="moviesCard__image"
         src={require("../../../images/pic.png")}
-        alt={props.alt}
+        alt={props.title}
       ></img>
       <div className="moviesCard__box">
-        <h2 className="moviesCard__title">Название фильма</h2>
+        <h2 className="moviesCard__title">{props.title}</h2>
         <button
           className={`${
             pathname ? `moviesCard__like-deleteButton` : `moviesCard__like`
@@ -22,7 +22,7 @@ export default function MoviesCard(props) {
           type="button"
         ></button>
       </div>
-      <p className="moviesCard__time">1ч 42м</p>
+      <p className="moviesCard__time">{props.time}</p>
     </div>
   );
 }

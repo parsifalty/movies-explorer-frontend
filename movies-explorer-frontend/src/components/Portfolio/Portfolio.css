@@ -25,6 +25,7 @@
   background-position: 100% 35%;
   padding-bottom: 19px;
   border-bottom: 1px solid #e8e8e8;
+  transition: opacity 0.5s linear;
 }
 
 .portfolio__title {
@@ -36,6 +37,10 @@
   font-weight: 400;
   line-height: 20px; /* 111.111% */
   margin-bottom: 50px;
+}
+
+.portfolio__item:hover {
+  opacity: 0.6;
 }
 
 .portfolio__link {

@@ -5,7 +5,7 @@ import UserForm from "../UserForm/UserForm";
 
 export default function Login() {
   return (
-    <section className="login">
+    <main className="login">
       <div className="login__container">
         <Logo />
         <UserForm
@@ -22,11 +22,12 @@ export default function Login() {
             className="userForm__input userForm__input_type_email"
             id="userEmail"
             name="userEmail"
-            type="E-mail"
+            type="email"
             required
             minLength="2"
             maxLength="40"
             autoComplete="off"
+            placeholder="E-mail"
           />
           <label for="password" className="userForm__label">
             {" "}
@@ -41,9 +42,10 @@ export default function Login() {
             minLength="2"
             maxLength="200"
             autoComplete="off"
+            placeholder="Пароль"
           />
         </UserForm>
       </div>
-    </section>
+    </main>
   );
 }

@@ -7,18 +7,21 @@ export default function Footer() {
   const isMobile = useDeviceType();
 
   return (
-    <section className="footer">
+    <footer className="footer">
       <p className="footer__paragraph">
         Учебный проект Яндекс.Практикум х BeatFilm.
       </p>
-      {isMobile ? (
+      {isMobile.isMobile ? (
         <div className="footer__container">
           <p className="footer__container-item">© 2020</p>
           <p className="footer__container-item">
-            {" "}
-            <Link to="/" className="footer__link">
+            <a
+              href="https://github.com/parsifalty"
+              target="_blank"
+              className="footer__link"
+            >
               Github
-            </Link>
+            </a>
           </p>{" "}
           <p className="footer__container-item">Яндекс.Практикум</p>
         </div>
@@ -27,13 +30,16 @@ export default function Footer() {
           <p className="footer__container-item">© 2020</p>
           <p className="footer__container-item">Яндекс.Практикум</p>
           <p className="footer__container-item">
-            {" "}
-            <Link to="/" className="footer__link">
+            <a
+              href="https://github.com/parsifalty"
+              className="footer__link"
+              target="_blank"
+            >
               Github
-            </Link>
-          </p>{" "}
+            </a>
+          </p>
         </div>
       )}
-    </section>
+    </footer>
   );
 }

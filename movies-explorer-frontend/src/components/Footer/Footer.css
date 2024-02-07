@@ -45,6 +45,12 @@
 .footer__link {
   text-decoration: none;
   color: black;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.footer__link:hover {
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {

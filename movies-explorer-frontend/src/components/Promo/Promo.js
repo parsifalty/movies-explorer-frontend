@@ -11,11 +11,11 @@ export default function Promo() {
         <p className="promo__paragraph">
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </p>
-        <button className="promo__button" type="button">
+        <p className="promo__button">
           <a className="promo__link" href="#about">
             Узнать больше
           </a>
-        </button>
+        </p>
       </div>
     </section>
   );

@@ -14,16 +14,18 @@ export default function Navigation(props) {
     setIsOpen(false);
   }
 
+  console.log(!props.isDesktop.isTablet);
+
   return (
     <>
       {" "}
-      {props.isDesktop.isDesktop ? (
+      {!props.isDesktop.isMobile ? (
         <NavMenu isDesktop={props.isDesktop} />
       ) : (
         <>
           <button
             className={
-              props.location ? `navigation__button-black` : `navigation__button`
+              props.location ? `navigation-button-black` : `navigation-button`
             }
             onClick={handleOpen}
             type="button"

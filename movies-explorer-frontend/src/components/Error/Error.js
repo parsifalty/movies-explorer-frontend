@@ -6,11 +6,11 @@ export default function Error() {
     <section className="error">
       <h1 className="error__title">404</h1>
       <p className="error__text">Страница не найдена</p>
-      <button className="error__button" type="button">
+      <p className="error__button">
         <a href="javascript:history.back()" className="error__link">
           Назад
         </a>
-      </button>
+      </p>
     </section>
   );
 }

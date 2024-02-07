@@ -29,6 +29,11 @@ export default function AboutMe() {
             </a>
           </p>
         </div>
+        <img
+          className="aboutme__image"
+          alt="фото студента"
+          src={require("../images/student.png")}
+        ></img>
       </div>
     </section>
   );

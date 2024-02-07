@@ -1,4 +1,4 @@
-.navigation__button {
+.navigation-button {
   background: none;
   background-image: url("../Icons/icon__COLOR_icon-main\ \(4\).svg");
   width: 42px;
@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-.navigation__button-black {
+.navigation-button-black {
   background: none;
   background-image: url("../Icons/icon__COLOR_icon-main\ \(5\).svg");
   width: 42px;
@@ -19,7 +19,7 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .navigation__button {
+  .navigation-button {
     background: none;
     background-image: url("../Icons/icon__COLOR_icon-main\ \(4\).svg");
     width: 43px;
@@ -29,7 +29,7 @@
     cursor: pointer;
   }
 
-  .navigation__button-black {
+  .navigation-button-black {
     background: none;
     background-image: url("../Icons/icon__COLOR_icon-main\ \(5\).svg");
     width: 43px;
