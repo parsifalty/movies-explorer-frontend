@@ -6,9 +6,15 @@ export default function UserForm(props) {
   return (
     <section className="userForm">
       <h1 className="userForm__title">{props.title}</h1>
-      <form className="userForm__form" onSubmit={props.onSubmit}>
+      <form className="userForm__form" onSubmit={props.onSubmit} noValidate>
         {props.children}
-        <button className="userForm__submit" type="submit">
+        <button
+          className={
+            !props.isValid ? `userForm__submit-disabled` : `userForm__submit`
+          }
+          type="submit"
+          disabled={!props.isValid}
+        >
           {props.button}
         </button>
       </form>

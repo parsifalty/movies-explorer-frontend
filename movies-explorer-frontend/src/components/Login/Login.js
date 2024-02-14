@@ -2,8 +2,17 @@ import React from "react";
 import "./Login.css";
 import Logo from "../Logo/Logo";
 import UserForm from "../UserForm/UserForm";
+import useFormValidation from "../FormValidation/FormValidation";
 
-export default function Login() {
+export default function Login(props) {
+  const { values, errors, isInputValid, isValid, handleChange } =
+    useFormValidation();
+
+  function onSubmit(e) {
+    e.preventDefault();
+    props.onLogin(values.email, values.password);
+  }
+
   return (
     <main className="login">
       <div className="login__container">
@@ -11,7 +20,9 @@ export default function Login() {
         <UserForm
           title={"Рады видеть!"}
           button={"Войти"}
-          path={"/singup"}
+          path={"/signup"}
+          onSubmit={onSubmit}
+          isValid={isValid}
           login
         >
           <label for="userEmail" className="userForm__label">
@@ -21,29 +32,43 @@ export default function Login() {
           <input
             className="userForm__input userForm__input_type_email"
             id="userEmail"
-            name="userEmail"
+            name="email"
             type="email"
             required
             minLength="2"
             maxLength="40"
             autoComplete="off"
             placeholder="E-mail"
+            onChange={(evt) => {
+              handleChange(evt);
+              props.setIsError(false);
+            }}
+            value={values.email}
           />
+          <span className="userForm__error">{errors.email}</span>
           <label for="password" className="userForm__label">
             {" "}
             Пароль
           </label>
           <input
-            className="userForm__input userForm__input_type_password"
+            className="userForm__input"
             id="password"
             name="password"
             type="password"
             required
-            minLength="2"
+            minLength="3"
             maxLength="200"
             autoComplete="off"
             placeholder="Пароль"
+            onChange={(evt) => {
+              handleChange(evt);
+              props.setIsError(false);
+            }}
+            value={values.password}
           />
+          <span className="userForm__error userForm__error-password-login">
+            {errors.password}
+          </span>
         </UserForm>
       </div>
     </main>
