@@ -1,0 +1,56 @@
+.navpromo {
+  margin-left: auto;
+}
+
+.navpromo__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.navpromo__link {
+  color: #fff;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+}
+
+.navpromo__link_type_login {
+  cursor: pointer;
+  color: #000;
+  border-radius: 3px;
+  background: #2be080;
+  padding: 8px 20px;
+  color: black;
+}
+
+.navpromo__link_type_register {
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navpromo__link {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 160% */
+  }
+
+  .navpromo__link_type_login {
+    padding: 5px 12.5px;
+  }
+
+  .navpromo__list {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,47 @@
+.burgerMenu {
+  position: fixed;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  right: 0.1px;
+  bottom: 0.1px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+
+.burgerMenu__box {
+  background-color: white;
+  position: fixed;
+  right: 0.1px;
+  bottom: 0.1px;
+  width: 68vw;
+  height: 100vh;
+}
+
+.burgerMenu_active {
+  visibility: visible;
+}
+
+.burgerMenu__box-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  background: url("../../Icons/Group.svg") no-repeat;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 12px;
+  top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .burgerMenu__box {
+    width: 100vw;
+  }
+
+  .burgerMenu__box-button {
+    right: 5px;
+    top: 12px;
+  }
+}

@@ -1,0 +1,219 @@
+.aboutme__title {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: 1px solid black;
+  padding-bottom: 22px;
+}
+
+.aboutme {
+  padding: 112px 70px 0px 70px;
+}
+
+.aboutme__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 66px;
+}
+
+.aboutme__image {
+  width: 270px;
+  height: 327px;
+}
+
+.aboutme__container {
+  max-width: 590px;
+}
+
+.aboutme__container-info {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 111.111% */
+  margin: 0px;
+  margin-top: 18px;
+}
+
+.aboutme__container-paragraph {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  margin: 0px;
+  margin-top: 25px;
+  letter-spacing: 0px;
+}
+
+.aboutme__container-title {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px; /* 116% */
+  letter-spacing: -2px;
+  margin: 0px;
+}
+
+.aboutme__container-link {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  margin: 0px;
+  margin-top: 101px;
+}
+
+.aboutme__link {
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.5s linear;
+}
+
+.aboutme__link:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .aboutme__container-title {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: -1.6px;
+  }
+
+  .aboutme {
+    padding: 92px 50px 0px 50px;
+  }
+
+  .aboutme__image {
+    width: 254px;
+    height: 307px;
+  }
+
+  .aboutme__container-info {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    margin-top: 16px;
+  }
+
+  .aboutme__container-paragraph {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    margin-top: 20px;
+    max-width: 360px;
+  }
+
+  .aboutme__info {
+  }
+
+  .aboutme__container-link {
+    margin-top: 88px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .aboutme__title {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    padding-bottom: 27px;
+  }
+  .aboutme {
+    max-width: 292px;
+    margin: auto;
+    padding: 129px 14px 0px 14px;
+  }
+
+  .aboutme__info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .aboutme__image {
+    width: 292px;
+    height: 352px;
+  }
+
+  .aboutme__container {
+    padding: 0px;
+    margin: auto;
+    margin-top: 38px;
+    width: clamp(18.25rem, 17.893rem + 0.952vw, 18.75rem);
+  }
+
+  .aboutme__container-title {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    margin-top: 2px;
+  }
+
+  .aboutme__container-paragraph {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+    margin-top: 20px;
+  }
+
+  .aboutme__container-info {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 145.455% */
+    margin-top: 20px;
+  }
+  .aboutme__container-link {
+    margin: 0px;
+    margin-top: 40px;
+  }
+}

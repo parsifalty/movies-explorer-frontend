@@ -1,0 +1,96 @@
+.portfolio {
+  margin-top: 50px;
+  margin: 101px 70px 162px 70px;
+}
+
+.portfolio__container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 99.5%;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.portfolio__item {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: -1.2px;
+  background: url("../Icons/text__COLOR_font-main.svg") no-repeat;
+  margin: 0px;
+  background-position: 100% 35%;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #e8e8e8;
+  transition: opacity 0.5s linear;
+}
+
+.portfolio__title {
+  color: #a0a0a0;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+  margin-bottom: 50px;
+}
+
+.portfolio__item:hover {
+  opacity: 0.6;
+}
+
+.portfolio__link {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .portfolio {
+    margin: 90px 50px 130px 50px;
+  }
+
+  .portfolio__item {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 178.571% */
+    letter-spacing: -1.12px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .portfolio {
+    margin: auto;
+    margin-top: 71px;
+    margin-bottom: 71px;
+    max-width: 292px;
+  }
+  .portfolio__title {
+    color: #a0a0a0;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    margin-bottom: 40px;
+  }
+
+  .portfolio__item {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.72px;
+    background-size: 12px 12px;
+    background-position: 276px 6px;
+  }
+}

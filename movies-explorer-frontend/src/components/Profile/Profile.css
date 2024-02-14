@@ -1,0 +1,175 @@
+.profile__welcome {
+  color: #000;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.profile {
+  margin: auto;
+  margin-top: 58px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__flex {
+  min-width: 410px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 107px;
+  justify-content: space-between;
+  background: url("../Icons/line__COLOR_stroke-2.svg") no-repeat;
+  background-size: 410px 1px;
+  background-position: center center;
+}
+
+.profile__box {
+  max-width: 141px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+
+.profile__box-input {
+  border: none;
+  background: none;
+  width: 141px;
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__paragraph {
+  text-align: right;
+  height: 13px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__box-input::placeholder {
+  color: black;
+}
+
+.profile__edit-button {
+  color: #000;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  box-shadow: none;
+  background: 0;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6;
+}
+
+.profile__logout-button {
+  margin: 0px;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  box-shadow: none;
+  background: 0;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.profile__logout-button:hover {
+  opacity: 0.6;
+}
+
+.profile__buttons {
+  margin-top: 220px;
+  display: flex;
+  row-gap: 16px;
+  flex-direction: column;
+}
+
+.profile__link {
+  text-decoration: none;
+  color: #ff3055;
+}
+
+.profile__input:focus {
+  outline: 1px solid #3456f3;
+  background: none;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .profile {
+    margin-top: 220px;
+  }
+
+  .profile__flex {
+    margin-top: 80px;
+  }
+
+  .profile__buttons {
+    margin-top: 210px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .profile {
+    margin-top: 55px;
+  }
+
+  .profile__flex {
+    max-width: 260px;
+    min-width: 259px;
+    margin-top: 63px;
+    justify-content: center;
+  }
+
+  .profile__input {
+    max-width: 130px;
+  }
+
+  .profile__box {
+    gap: 35px;
+  }
+
+  .profile__buttons {
+    margin-top: 377px;
+    row-gap: 14px;
+  }
+
+  .profile__edit-button {
+    font-size: 12px;
+  }
+
+  .profile__logout-button {
+    font-size: 12px;
+  }
+}
