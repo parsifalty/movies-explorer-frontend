@@ -76,7 +76,7 @@ class ApiMain {
 }
 
 const apiMain = new ApiMain({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "http://api.diplomka.nomoredomainsmonster.ru",
 });
 
 export default apiMain;
