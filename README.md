@@ -8,3 +8,5 @@ Ip - 158.160.148.230
 frontend - diplomka.nomoredomainswork.ru/
 
 backend - api.diplomka.nomoredomainsmonster.ru
+
+pull request https://github.com/parsifalty/movies-explorer-frontend/pull/8
