@@ -64,6 +64,7 @@ function App() {
     auth
       .register(name, email, password)
       .then((res) => {
+        setCurrentUser(res);
         navigate("/");
       })
       .catch((err) => {
@@ -77,6 +78,7 @@ function App() {
       .then((res) => {
         localStorage.setItem("jwt", res.token);
         setIsLogged(true);
+        setCurrentUser(res);
         navigate("/movies");
       })
       .catch((err) => {
