@@ -9,4 +9,4 @@ frontend - diplomka.nomoredomainswork.ru/
 
 backend - api.diplomka.nomoredomainsmonster.ru
 
-pull request https://github.com/parsifalty/movies-explorer-frontend/pull/8
+pull request https://github.com/parsifalty/movies-explorer-frontend/pull/9
