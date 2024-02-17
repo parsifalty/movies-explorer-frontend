@@ -64,7 +64,7 @@ function App() {
     auth
       .register(name, email, password)
       .then((res) => {
-        navigate("/movies");
+        navigate("/");
       })
       .catch((err) => {
         console.error(err);
