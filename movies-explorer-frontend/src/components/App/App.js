@@ -25,6 +25,7 @@ function App() {
   const [isCheckedToken, setIsCheckedToken] = React.useState(true);
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [savedMovies, setSavedMovies] = React.useState([]);
+  const [firstEntrance, setFirstEntrance] = React.useState(true);
 
   const [userEmail, setUserEmail] = React.useState({});
 
@@ -115,6 +116,7 @@ function App() {
         setIsSend(true);
         setIsSuccess(true);
         setIsError(false);
+        setFirstEntrance(false);
       })
       .catch((err) => {
         setIsError(true);
@@ -212,6 +214,7 @@ function App() {
                   isSend={isSend}
                   setIsSend={setIsSend}
                   isError={isError}
+                  firstEntrance={firstEntrance}
                 />
               }
             />

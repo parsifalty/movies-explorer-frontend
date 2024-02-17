@@ -101,7 +101,7 @@ export default function Profile(props) {
             >
               Сохранить
             </button>
-            {props.isSuccess ? (
+            {props.isSuccess && !props.firstEntrance ? (
               <span className="profile__success">Данные успешно изменены</span>
             ) : (
               ""
