@@ -64,8 +64,21 @@ function App() {
     auth
       .register(name, email, password)
       .then((res) => {
-        setCurrentUser(res);
-        navigate("/");
+        console.log(res);
+        if (res) {
+          auth
+            .login(email, password)
+            .then((res) => {
+              console.log(res.token);
+              localStorage.setItem("jwt", res.token);
+              setIsLogged(true);
+              setCurrentUser(res);
+              navigate("/movies");
+            })
+            .catch((err) => console.error(err));
+        } else {
+          return "колбаска";
+        }
       })
       .catch((err) => {
         console.error(err);
@@ -96,7 +109,7 @@ function App() {
   }
 
   function handleSignOut() {
-    localStorage.removeItem("jwt");
+    localStorage.clear();
     navigate("/");
     setIsLogged(false);
   }

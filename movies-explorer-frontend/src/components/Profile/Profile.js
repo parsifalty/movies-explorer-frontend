@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import CurrentUserContext from "../context/UserContext";
 import useFormValidation from "../FormValidation/FormValidation";
+import { EmailRegex } from "../../utils/constants";
 
 export default function Profile(props) {
   const currentUser = React.useContext(CurrentUserContext);
@@ -57,7 +58,7 @@ export default function Profile(props) {
                 minLength="2"
                 maxLength="40"
                 autoComplete="off"
-                placeholder={currentUser.name}
+                placeholder=""
                 value={values.name}
                 onChange={(evt) => {
                   handleChange(evt);
@@ -69,7 +70,7 @@ export default function Profile(props) {
                 {errors.name}
               </span>
               <input
-                placeholder={currentUser.email}
+                placeholder=""
                 className="profile__box-input"
                 id="userEmail"
                 name="email"
@@ -77,6 +78,7 @@ export default function Profile(props) {
                 required
                 minLength="2"
                 maxLength="40"
+                pattern={EmailRegex}
                 autoComplete="off"
                 onChange={(evt) => {
                   handleChange(evt);

@@ -1,3 +1,4 @@
+const EmailRegex = "^\\S+@\\S+\\.\\S+$";
 const Maxscreen = 1280;
 const MediumScreen = 1024;
 const Smallscreen = 650;
@@ -10,6 +11,7 @@ const StepMediumscreen = 3;
 const Stepsmallscreen = 2;
 export {
   Maxscreen,
+  EmailRegex,
   MediumScreen,
   Smallscreen,
   InitMoreMaxscreen,

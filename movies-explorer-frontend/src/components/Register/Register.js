@@ -3,6 +3,7 @@ import "./Register.css";
 import Logo from "../Logo/Logo";
 import UserForm from "../UserForm/UserForm";
 import useFormValidation from "../FormValidation/FormValidation";
+import { EmailRegex } from "../../utils/constants";
 
 export default function Register(props) {
   const { values, errors, isInputValid, isValid, handleChange } =
@@ -60,6 +61,7 @@ export default function Register(props) {
             maxLength="40"
             autoComplete="off"
             placeholder="E-mail"
+            pattern={EmailRegex}
             value={values.email}
             onChange={(evt) => {
               handleChange(evt);

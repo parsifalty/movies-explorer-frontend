@@ -3,6 +3,7 @@ import "./Login.css";
 import Logo from "../Logo/Logo";
 import UserForm from "../UserForm/UserForm";
 import useFormValidation from "../FormValidation/FormValidation";
+import { EmailRegex } from "../../utils/constants";
 
 export default function Login(props) {
   const { values, errors, isInputValid, isValid, handleChange } =
@@ -39,6 +40,7 @@ export default function Login(props) {
             maxLength="40"
             autoComplete="off"
             placeholder="E-mail"
+            pattern={EmailRegex}
             onChange={(evt) => {
               handleChange(evt);
               props.setIsError(false);
