@@ -51,7 +51,7 @@ function App() {
           if (data) {
             setUserEmail({ email: data.email });
             setIsLogged(true);
-            navigate("/");
+            navigate("/movies");
           }
         })
         .catch((err) => {
@@ -64,7 +64,7 @@ function App() {
     auth
       .register(name, email, password)
       .then((res) => {
-        navigate("/signin");
+        navigate("/movies");
       })
       .catch((err) => {
         console.error(err);
@@ -77,7 +77,7 @@ function App() {
       .then((res) => {
         localStorage.setItem("jwt", res.token);
         setIsLogged(true);
-        navigate("/");
+        navigate("/movies");
       })
       .catch((err) => {
         console.error(err);
