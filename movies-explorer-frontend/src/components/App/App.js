@@ -42,6 +42,8 @@ function App() {
       .catch((err) => console.error(err));
   }, [isLogged]);
 
+  console.log(localStorage);
+
   React.useEffect(() => {
     const jwt = localStorage.jwt;
     if (jwt) {
@@ -51,7 +53,7 @@ function App() {
           if (data) {
             setUserEmail({ email: data.email });
             setIsLogged(true);
-            navigate("/movies");
+            navigate(window.history);
           }
         })
         .catch((err) => {
@@ -65,23 +67,23 @@ function App() {
     auth
       .register(name, email, password)
       .then((res) => {
-        console.log(res);
         if (res) {
           auth
             .login(email, password)
             .then((res) => {
-              console.log(res.token);
               localStorage.setItem("jwt", res.token);
               setIsLogged(true);
               setCurrentUser(res);
               navigate("/movies");
             })
-            .catch((err) => console.error(err));
-        } else {
-          return "колбаска";
+            .catch((err) => {
+              setIsError(true);
+              console.error(err);
+            });
         }
       })
       .catch((err) => {
+        setIsError(true);
         console.error(err);
       })
       .finally(() => setIsSend(false));
@@ -99,18 +101,27 @@ function App() {
       })
       .catch((err) => {
         console.error(err);
+        setIsError(true);
       })
       .finally(() => setIsSend(false));
   }
 
   function handleSubmitProfileForm(username, email) {
+    setIsSend(true);
     apiMain
       .setUserInfo(username, email, localStorage.jwt)
       .then((res) => {
         setCurrentUser(res);
         setIsSend(true);
+        setIsSuccess(true);
+        setIsError(false);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        setIsError(true);
+        setIsSuccess(false);
+        console.error(err);
+      })
+      .finally(() => setIsSend(false));
   }
 
   function handleSignOut() {
@@ -152,6 +163,7 @@ function App() {
 
   console.log(currentUser);
   console.log(isLogged);
+  console.log(isError);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -191,6 +203,7 @@ function App() {
               element={
                 <ProtectedRouteElement
                   element={Profile}
+                  isSuccess={isSuccess}
                   isLogged={isLogged}
                   logged={isLogged}
                   handleSignOut={handleSignOut}
@@ -198,6 +211,7 @@ function App() {
                   setIsError={setIsError}
                   isSend={isSend}
                   setIsSend={setIsSend}
+                  isError={isError}
                 />
               }
             />
@@ -209,6 +223,7 @@ function App() {
                   onLogin={handleLogin}
                   setIsError={setIsError}
                   isSend={isSend}
+                  isError={isError}
                 />
               }
             />
@@ -220,6 +235,7 @@ function App() {
                   setIsError={setIsError}
                   isLogged={isLogged}
                   isSend={isSend}
+                  isError={isError}
                 />
               }
             />

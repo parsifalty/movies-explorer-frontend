@@ -14,6 +14,8 @@ export default function Login(props) {
     props.onLogin(values.email, values.password);
   }
 
+  console.log(props.isError);
+
   return (
     <main className="login">
       <div className="login__container">
@@ -26,6 +28,7 @@ export default function Login(props) {
           isValid={isValid}
           login
           isSend={props.isSend}
+          isError={props.isError}
         >
           <label for="userEmail" className="userForm__label">
             {" "}

@@ -26,6 +26,7 @@ export default function Register(props) {
           register
           isValid={isValid}
           isSend={props.isSend}
+          isError={props.isError}
         >
           <label for="userName" className="userForm__label">
             {" "}

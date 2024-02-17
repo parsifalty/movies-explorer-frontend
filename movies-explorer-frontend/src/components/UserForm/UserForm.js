@@ -9,6 +9,13 @@ export default function UserForm(props) {
       <h1 className="userForm__title">{props.title}</h1>
       <form className="userForm__form" onSubmit={props.onSubmit} noValidate>
         {props.children}
+        {props.isError ? (
+          <span className="userForm__error">
+            На сервере произошла ошибка попробуйте позже
+          </span>
+        ) : (
+          ""
+        )}
         <button
           className={
             !props.isValid ? `userForm__submit-disabled` : `userForm__submit`

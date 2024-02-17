@@ -90,7 +90,7 @@ export default function Profile(props) {
           <div className="profile__buttons">
             <button
               type="submit"
-              disabled={!isValid}
+              disabled={!isValid || props.isSend}
               className={
                 isEditing
                   ? `profile__submit-button profile__submit-button_active ${
@@ -101,8 +101,15 @@ export default function Profile(props) {
             >
               Сохранить
             </button>
-            {props.isSend && !isEditing ? (
+            {props.isSuccess ? (
               <span className="profile__success">Данные успешно изменены</span>
+            ) : (
+              ""
+            )}
+            {props.isError ? (
+              <span className="profile__error">
+                На сервере произошла ошибка
+              </span>
             ) : (
               ""
             )}
