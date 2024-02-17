@@ -63,7 +63,7 @@
   transition: opacity 0.5s linear;
 }
 
-.moviesCard__like-deleteButton:hover {
+.moviesCard:hover .moviesCard__like-deleteButton {
   cursor: pointer;
   opacity: 0.6;
   background: url(../../../Icons/d1.svg) no-repeat top;

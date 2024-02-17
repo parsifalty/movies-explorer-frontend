@@ -62,6 +62,7 @@ export default function SavedMovies(props) {
           searchedMovie={searchMovie}
           firstEntrance={firstEntrance}
           shortChange={shortChange}
+          setIsError={props.setIsError}
         />
         <MoviesCardList
           movies={filteredMovies}

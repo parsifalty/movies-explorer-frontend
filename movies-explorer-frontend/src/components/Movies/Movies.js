@@ -32,20 +32,23 @@ export default function Movies(props) {
 
   function searchMovies(search) {
     if (allMovies.length === 0) {
+      setIsLoading(true);
       apiMovies
         .getMovies()
         .then((res) => {
           setAllMovies(res);
+          console.log(res);
           setIsCheck(false);
           setServerError(false);
           setFirstEntrance(false);
+          setIsLoading(false);
           filter(search, isCheck, res);
         })
         .catch((err) => {
           setServerError(true);
+          console.log(serverError);
           console.error(`Ошибка поиска ${err}`);
-        })
-        .finally(() => setIsLoading(true));
+        });
     } else {
       filter(search, isCheck, allMovies);
     }

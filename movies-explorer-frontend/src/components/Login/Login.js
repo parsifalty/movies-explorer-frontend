@@ -20,11 +20,12 @@ export default function Login(props) {
         <Logo />
         <UserForm
           title={"Рады видеть!"}
-          button={"Войти"}
+          button={props.isSend ? "Вход..." : "Войти"}
           path={"/signup"}
           onSubmit={onSubmit}
           isValid={isValid}
           login
+          isSend={props.isSend}
         >
           <label for="userEmail" className="userForm__label">
             {" "}

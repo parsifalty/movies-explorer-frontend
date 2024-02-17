@@ -40,6 +40,8 @@ export default function MoviesCardList(props) {
     return counter;
   }
 
+  console.log(props.serverError);
+
   React.useEffect(() => {
     if (pathname === "/movies") {
       setCount(printCards().init);
@@ -93,17 +95,17 @@ export default function MoviesCardList(props) {
                 />
               );
             })
+          ) : !props.firstEntrance ? (
+            <span className="moviesCardList__error">«Ничего не найдено»</span>
           ) : props.serverError ? (
             <span className="moviesCardList__error">
               «Во время запроса произошла ошибка. Возможно, проблема с
               соединением или сервер недоступен. Подождите немного и попробуйте
               ещё раз»
             </span>
-          ) : !props.firstEntrance ? (
-            <span className="moviesCardList__error">«Ничего не найдено»</span>
           ) : pathname === "/movies" ? (
             <span className="moviesCardList__error">
-              «Чтобы увидеть список фильмоа выполните поиск»
+              «Чтобы увидеть список фильмы выполните поиск»
             </span>
           ) : (
             <span className="moviesCardList__error">

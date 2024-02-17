@@ -20,11 +20,12 @@ export default function Register(props) {
         <Logo />
         <UserForm
           title={"Добро пожаловать!"}
-          button={"Зарегестрироваться"}
+          button={props.isSend ? "Регистрация..." : "Зарегестрироваться"}
           path={"/signin"}
           onSubmit={onSubmit}
           register
           isValid={isValid}
+          isSend={props.isSend}
         >
           <label for="userName" className="userForm__label">
             {" "}

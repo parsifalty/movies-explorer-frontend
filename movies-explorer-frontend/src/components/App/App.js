@@ -17,7 +17,7 @@ import ErrorContext from "../context/ErrorContext";
 
 function App() {
   const navigate = useNavigate();
-  const [isLogged, setIsLogged] = React.useState(true);
+  const [isLogged, setIsLogged] = React.useState(false);
   const [isSend, setIsSend] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({});
   const [movies, setMovies] = React.useState([]);
@@ -61,6 +61,7 @@ function App() {
   }, []);
 
   function handleRegister(name, email, password) {
+    setIsSend(true);
     auth
       .register(name, email, password)
       .then((res) => {
@@ -82,10 +83,12 @@ function App() {
       })
       .catch((err) => {
         console.error(err);
-      });
+      })
+      .finally(() => setIsSend(false));
   }
 
   function handleLogin(email, password) {
+    setIsSend(true);
     auth
       .login(email, password)
       .then((res) => {
@@ -96,7 +99,8 @@ function App() {
       })
       .catch((err) => {
         console.error(err);
-      });
+      })
+      .finally(() => setIsSend(false));
   }
 
   function handleSubmitProfileForm(username, email) {
@@ -104,6 +108,7 @@ function App() {
       .setUserInfo(username, email, localStorage.jwt)
       .then((res) => {
         setCurrentUser(res);
+        setIsSend(true);
       })
       .catch((err) => console.error(err));
   }
@@ -146,6 +151,7 @@ function App() {
   }
 
   console.log(currentUser);
+  console.log(isLogged);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -176,6 +182,7 @@ function App() {
                   logged={isLogged}
                   savedMovie={savedMovies}
                   onDelete={handleDeleteMovie}
+                  setIsError={setIsError}
                 />
               }
             />
@@ -189,6 +196,8 @@ function App() {
                   handleSignOut={handleSignOut}
                   onSubmit={handleSubmitProfileForm}
                   setIsError={setIsError}
+                  isSend={isSend}
+                  setIsSend={setIsSend}
                 />
               }
             />
@@ -199,6 +208,7 @@ function App() {
                   isLogged={isLogged}
                   onLogin={handleLogin}
                   setIsError={setIsError}
+                  isSend={isSend}
                 />
               }
             />
@@ -209,6 +219,7 @@ function App() {
                   onRegister={handleRegister}
                   setIsError={setIsError}
                   isLogged={isLogged}
+                  isSend={isSend}
                 />
               }
             />

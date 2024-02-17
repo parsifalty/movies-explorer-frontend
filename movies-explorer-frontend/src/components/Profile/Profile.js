@@ -9,15 +9,16 @@ import { EmailRegex } from "../../utils/constants";
 export default function Profile(props) {
   const currentUser = React.useContext(CurrentUserContext);
 
-  const { values, errors, isInputValid, isValid, handleChange } =
+  const { values, errors, isInputValid, isValid, handleChange, reset } =
     useFormValidation();
 
   const [isEditing, setIsEditing] = React.useState(false);
 
-  /* React.useEffect(() => {
-    setName(currentUser.name);
-    setEmail(currentUser.email);
-  }, [currentUser]); */
+  React.useEffect(() => {
+    reset({ name: currentUser.name, email: currentUser.email });
+  }, [reset, currentUser, isEditing]);
+
+  console.log(values.email);
 
   function handleEditing() {
     if (!isEditing) {
@@ -60,10 +61,7 @@ export default function Profile(props) {
                 autoComplete="off"
                 placeholder=""
                 value={values.name}
-                onChange={(evt) => {
-                  handleChange(evt);
-                  props.setIsError(false);
-                }}
+                onChange={handleChange}
                 disabled={!isEditing}
               />
               <span className="profile__error profile__error-name">
@@ -80,10 +78,7 @@ export default function Profile(props) {
                 maxLength="40"
                 pattern={EmailRegex}
                 autoComplete="off"
-                onChange={(evt) => {
-                  handleChange(evt);
-                  props.setIsError(false);
-                }}
+                onChange={handleChange}
                 disabled={!isEditing}
                 value={values.email}
               />
@@ -106,6 +101,11 @@ export default function Profile(props) {
             >
               Сохранить
             </button>
+            {props.isSend && !isEditing ? (
+              <span className="profile__success">Данные успешно изменены</span>
+            ) : (
+              ""
+            )}
             <button
               className="profile__edit-button"
               type="button"

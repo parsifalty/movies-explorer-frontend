@@ -27,6 +27,8 @@ export default function SearchForm(props) {
     }
   }
 
+  console.log(props.setIsError);
+
   return (
     <section className="searchForm">
       <form
