@@ -36,9 +36,20 @@ function App() {
 
   const [userEmail, setUserEmail] = React.useState({});
 
-  React.useEffect(() => {
-    navigate(window.history);
-  }, [window.history]);
+  const [currentPage, setCurrentPage] = React.useState(null);
+
+  function navigation() {
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/movies" ||
+      location.pathname === "/saved-movies" ||
+      location.pathname === "/profile"
+    ) {
+      navigate();
+    } else {
+      return;
+    }
+  }
 
   React.useEffect(() => {
     if (!isLogged) return;
@@ -54,10 +65,9 @@ function App() {
       .catch((err) => console.error(err));
   }, [isLogged]);
 
-  console.log(localStorage);
-
   React.useEffect(() => {
     const jwt = localStorage.jwt;
+
     if (jwt) {
       auth
         .checkToken(jwt)
@@ -66,12 +76,13 @@ function App() {
             setUserEmail({ email: data.email });
             setIsLogged(true);
           }
+          navigation();
         })
         .catch((err) => {
           console.error(err);
         });
     }
-  }, [isLogged]);
+  }, []);
 
   function handleRegister(name, email, password) {
     setIsSend(true);
@@ -248,7 +259,7 @@ function App() {
                 />
               }
             />
-            <Route path="*" element={<Error />} />
+            <Route path="*" element={<Error navigation={navigation} />} />
           </Routes>
         </div>
       </ErrorContext.Provider>
