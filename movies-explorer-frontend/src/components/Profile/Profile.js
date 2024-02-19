@@ -9,16 +9,31 @@ import { EmailRegex } from "../../utils/constants";
 export default function Profile(props) {
   const currentUser = React.useContext(CurrentUserContext);
 
-  const { values, errors, isInputValid, isValid, handleChange, reset } =
-    useFormValidation();
+  const {
+    values,
+    errors,
+    isInputValid,
+    isValid,
+    handleChange,
+    reset,
+    setIsValid,
+  } = useFormValidation();
+
+  const userName = currentUser.name === values.name;
+  const userEmail = currentUser.email === values.email;
 
   const [isEditing, setIsEditing] = React.useState(false);
+
+  const [isChanged, setIsChanged] = React.useState();
 
   React.useEffect(() => {
     reset({ name: currentUser.name, email: currentUser.email });
   }, [reset, currentUser, isEditing]);
 
-  console.log(values.email);
+  console.log(currentUser.name === values.name);
+  console.log(currentUser.email === values.email);
+  console.log(values.name);
+  console.log(currentUser.name);
 
   function handleEditing() {
     if (!isEditing) {
@@ -29,10 +44,19 @@ export default function Profile(props) {
 
   function handleSubmitForm(e) {
     e.preventDefault();
-
     props.onSubmit(values.name, values.email);
+
     setIsEditing(false);
   }
+
+  React.useEffect(() => {
+    if (
+      values.name === currentUser.name &&
+      values.email === currentUser.email
+    ) {
+      setIsValid(false);
+    }
+  }, [values]);
 
   return (
     <>

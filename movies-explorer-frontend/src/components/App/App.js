@@ -1,5 +1,11 @@
 import "./App.css";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../Movies/SavedMovies/SavedMovies";
@@ -17,6 +23,7 @@ import ErrorContext from "../context/ErrorContext";
 
 function App() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isLogged, setIsLogged] = React.useState(false);
   const [isSend, setIsSend] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({});
@@ -28,6 +35,10 @@ function App() {
   const [firstEntrance, setFirstEntrance] = React.useState(true);
 
   const [userEmail, setUserEmail] = React.useState({});
+
+  React.useEffect(() => {
+    navigate(window.history);
+  }, [window.history]);
 
   React.useEffect(() => {
     if (!isLogged) return;
@@ -54,14 +65,13 @@ function App() {
           if (data) {
             setUserEmail({ email: data.email });
             setIsLogged(true);
-            navigate(window.history);
           }
         })
         .catch((err) => {
           console.error(err);
         });
     }
-  }, []);
+  }, [isLogged]);
 
   function handleRegister(name, email, password) {
     setIsSend(true);
@@ -162,10 +172,6 @@ function App() {
         .catch((err) => console.error(`Ошибка при установке лайка ${err}`));
     }
   }
-
-  console.log(currentUser);
-  console.log(isLogged);
-  console.log(isError);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

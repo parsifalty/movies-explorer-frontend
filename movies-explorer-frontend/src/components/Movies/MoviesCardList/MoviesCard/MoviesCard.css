@@ -51,7 +51,9 @@
 }
 
 .moviesCard__like-deleteButton {
+  display: none;
   background: none;
+  background: url(../../../Icons/d1.svg) no-repeat top;
   border: none;
   padding: 0;
   min-width: 24px;
@@ -64,9 +66,12 @@
 }
 
 .moviesCard:hover .moviesCard__like-deleteButton {
-  cursor: pointer;
+  display: block;
+}
+
+.moviesCard__like-deleteButton:hover {
   opacity: 0.6;
-  background: url(../../../Icons/d1.svg) no-repeat top;
+  cursor: pointer;
 }
 
 .moviesCard__time {

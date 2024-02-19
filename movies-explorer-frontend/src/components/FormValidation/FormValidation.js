@@ -42,6 +42,7 @@ export default function useFormValidation() {
     errors,
     isInputValid,
     isValid,
+    setIsValid,
     handleChange,
     setValue,
     reset,
