@@ -1,16 +1,20 @@
 import React from "react";
 import "./Error.css";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-export default function Error() {
+export default function Error(props) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+
   return (
     <section className="error">
       <h1 className="error__title">404</h1>
       <p className="error__text">Страница не найдена</p>
-      <p className="error__button">
-        <a href="javascript:history.back()" className="error__link">
-          Назад
-        </a>
-      </p>
+      <button className="error__button" onClick={() => navigate(-1)}>
+        Назад
+      </button>
     </section>
   );
 }

@@ -34,6 +34,17 @@
 }
 
 .promo__button {
+  max-width: 131px;
+}
+
+.promo__container {
+  margin: 75px 70px 0px 70px;
+  background: url("../Icons/text__COLOR_landing-logo.svg") no-repeat;
+  background-position: top right;
+}
+
+.promo__link {
+  text-decoration: none;
   color: white;
   font-family: Inter, sans-serif;
   font-size: 12px;
@@ -47,17 +58,6 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 10px 20px;
   max-width: 89px;
-}
-
-.promo__container {
-  margin: 75px 70px 0px 70px;
-  background: url("../Icons/text__COLOR_landing-logo.svg") no-repeat;
-  background-position: top right;
-}
-
-.promo__link {
-  text-decoration: none;
-  color: #fff;
 }
 
 .promo__button:hover {
@@ -102,6 +102,12 @@
     margin-bottom: 78px;
     padding: 8px 16px;
     font-family: Inter, sans-serif;
+    height: 38px;
+    padding: 0px;
+  }
+
+  .promo__link {
+    margin: 0px;
   }
 }
 

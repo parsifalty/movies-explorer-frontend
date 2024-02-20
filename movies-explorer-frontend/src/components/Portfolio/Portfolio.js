@@ -6,33 +6,27 @@ export default function Portfolio() {
     <section className="portfolio">
       <h3 className="portfolio__title">Портфолио</h3>
       <ul className="portfolio__container">
-        <li className="portfolio__item">
-          <a
-            className="portfolio__link"
-            target="_blank"
-            href="https://parsifalty.github.io/mesto/"
-          >
-            Статичный сайт
-          </a>
-        </li>
-        <li className="portfolio__item">
-          <a
-            className="portfolio__link"
-            href="https://parsifalty.github.io/russian-travel/index.html"
-            target="_blank"
-          >
-            Адаптивный сайт
-          </a>
-        </li>
-        <li className="portfolio__item">
-          <a
-            className="portfolio__link"
-            target="_blank"
-            href="https://parsifalty.github.io/russian-travel/index.html"
-          >
-            Одностраничное приложение
-          </a>
-        </li>
+        <a
+          className="portfolio__link"
+          target="_blank"
+          href="https://parsifalty.github.io/mesto/"
+        >
+          <li className="portfolio__item">Статичный сайт</li>
+        </a>
+        <a
+          className="portfolio__link"
+          href="https://parsifalty.github.io/russian-travel/index.html"
+          target="_blank"
+        >
+          <li className="portfolio__item">Адаптивный сайт </li>
+        </a>
+        <a
+          className="portfolio__link"
+          target="_blank"
+          href="https://parsifalty.github.io/russian-travel/index.html"
+        >
+          <li className="portfolio__item">Одностраничное приложение</li>
+        </a>
       </ul>
     </section>
   );
